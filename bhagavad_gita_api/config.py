@@ -20,8 +20,8 @@ def get_database_uri():
     )
 
 
-class SqlDsn(AnyUrl):
-    allowed_schemes = {"postgres", "postgresql", "sqlite", "mysql"}
+class SqlDsn(str):
+    pass
 
 
 class Settings(BaseSettings):

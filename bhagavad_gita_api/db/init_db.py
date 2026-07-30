@@ -41,3 +41,16 @@ def init_db(db: Session) -> None:
     Base.metadata.create_all(engine)
     if new_db:
         insert_all()
+
+
+if __name__ == "__main__":
+    from bhagavad_gita_api.db.session import SessionLocal
+    db = SessionLocal()
+    try:
+        print("🛠️ Initializing database and seeding data...")
+        init_db(db)
+        print("✅ Success! Database is ready.")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+    finally:
+        db.close()

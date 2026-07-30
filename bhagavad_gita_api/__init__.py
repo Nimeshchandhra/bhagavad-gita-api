@@ -11,4 +11,4 @@ https://github.com/gita/bhagavad-gita-api
 
 from importlib.metadata import version
 
-__version__ = version(__package__)
+__version__ = "2.0.2-research"
